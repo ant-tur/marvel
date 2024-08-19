@@ -1,10 +1,10 @@
 import { useHttp } from '../hooks/http.hook';
+import { _apiKey } from './apiKey';
 
 const useMarvelService = () => {
 	const { loading, request, error, clearError } = useHttp();
 
 	const _apiBase = 'https://gateway.marvel.com:443/v1/public/';
-	const _apiKey = 'apikey=a15b861b780088174fcecac4bd7741e1';
 	const _baseOffset = 210;
 
 	const getAllCharacters = async (offset = _baseOffset) => {
